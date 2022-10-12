@@ -1,0 +1,13 @@
+module continue_in_loop;
+   initial begin
+    $display(&quot;-----------------------------------------------------------------&quot;);
+      for(int i=0;i&lt;8;i++) begin    
+       if((i &gt; 2) &amp;&amp; (i &lt; 7))begin
+        $display(&quot;\t\tCalling continue,&quot;);
+        continue;
+      end  
+       $display(&quot;\t\tAfter Continue\t:: Value of i=%0d&quot;,i);
+    end
+     $display(&quot;-----------------------------------------------------------------&quot;);
+   end
+ endmodule
