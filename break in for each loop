@@ -1,0 +1,16 @@
+module foreach_loop_break;
+  int a[4];
+     initial begin
+    $display(&quot;-----------------------------------------------------------------&quot;);
+      foreach(a[i]) a[i] = i;
+    foreach(a[i]) begin
+      $display(&quot;\tValue of a[%0d]=%0d&quot;,i,a[i]);
+      if(i == 2) begin
+        $display(&quot;\tCalling break,&quot;);
+        break;
+      end 
+    end     
+         $display(&quot;-----------------------------------------------------------------&quot;);
+  end    
+endmodule
+
