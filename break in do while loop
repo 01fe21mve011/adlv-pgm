@@ -1,0 +1,21 @@
+module break_in_do_while_loop;
+
+  int i;
+   
+  initial begin
+    $display(&quot;-----------------------------------------------------------------&quot;);
+    i = 8;
+       do begin
+      $display(&quot;\tValue of i=%0d&quot;,i);
+      if(i == 4) begin
+        $display(&quot;\tCalling break,&quot;);
+        break;
+      end 
+      i--;
+    end
+    while(i!=0);
+     
+    $display(&quot;-----------------------------------------------------------------&quot;);
+  end     
+endmodule
+ Simulator output:
